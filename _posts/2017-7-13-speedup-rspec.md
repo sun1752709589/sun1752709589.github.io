@@ -3,6 +3,8 @@ layout: post
 title: 如何加速rspec测试速度
 ---
 
+本博客介绍了rails中用rspec如何加速测试速度
+
 ### 加速rspec测试速度
 
 ```
