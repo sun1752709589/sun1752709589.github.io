@@ -5,7 +5,7 @@ title: 开发遇上docker
 
 ### 开发遇上docker
 
-```
+<code>
 mysql:
   docker run --name mysql -p 3306:3306 -v /sun/docker_data/mysql:/sun -e MYSQL_ROOT_PASSWORD=... -d mysql:latest
   docker run -d --name mysql -v /tmp/db:/var/lib/mysql -p 3309:3306 -e MYSQL_ROOT_PASSWORD=... mysql
@@ -76,4 +76,4 @@ docker run -d --name mysql -v /data/mysql_db:/var/lib/mysql -p 3306:3306 -e MYSQ
 
 docker run -p 6378:6379 --name redis -d redis:latest
 
-```
+<code>
