@@ -4,6 +4,7 @@ title: 如何加速rspec测试速度
 ---
 
 ### 加速rspec测试速度
+
 ```
 偶然发现的gem包:https://github.com/grosser/parallel_tests
 原理:计算机多核开多个测试进程,并且进程之间用用不同数据库,防止干扰.
