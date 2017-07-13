@@ -6,7 +6,7 @@
 name: 孙亚飞的博客地盘
 
 # Short bio or description (displayed in the header)
-description:
+description: yeah!
 
 # URL of your avatar or profile pic (you could use your GitHub profile pic)
 avatar: https://sun1752709589.github.io/images/jekyll-logo.jpg
@@ -18,7 +18,7 @@ avatar: https://sun1752709589.github.io/images/jekyll-logo.jpg
 # Includes an icon in the footer for each username you enter
 footer-links:
   dribbble:
-  email:
+  email: email4sun@qq.com
   facebook:
   flickr:
   github: sun1752709589/sun1752709589.github.io
@@ -26,7 +26,7 @@ footer-links:
   linkedin:
   pinterest:
   rss: # just type anything here for a working RSS icon
-  twitter: sun
+  twitter:
   stackoverflow: # your stackoverflow profile, e.g. "users/50476/bart-kiers"
   youtube: # channel/<your_long_string> or user/<user-name>
   googleplus: # anything in your profile username that comes after plus.google.com/
