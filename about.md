@@ -1,7 +1,7 @@
 ---
 layout: page
 title: 关于我
-permalink: /关于我/
+permalink: /about/
 ---
 
 我就是我,颜色不一样的烟火!
