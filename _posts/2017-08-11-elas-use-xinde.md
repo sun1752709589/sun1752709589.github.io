@@ -13,4 +13,23 @@ curl -XPUT 'localhost:9200/<index_name>/_settings' -d '{"number_of_replicas": 0}
 ### 某一索引为yellow原因及修复方法
 ```
 https://www.datadoghq.com/blog/elasticsearch-unassigned-shards/
+1)查看某一副本分片未分配的原因
+  curl -XGET localhost:9200/_cat/shards?h=index,shard,prirep,state,unassigned.reason| grep UNASSIGNED
+2)删除索引
+  curl -XDELETE 'localhost:9200/index_name/'
+3)能够用单个命令来删除所有数据可能会导致可怕的后果。如果你想要避免意外的大量删除, 你可以在你的 elasticsearch.yml 做如下配置：
+  action.destructive_requires_name: true
+4)查看节点磁盘占用比例
+  curl -s 'localhost:9200/_cat/allocation?v'
+  结果如:
+  shards disk.indices disk.used disk.avail disk.total disk.percent host         ip           node
+   508      159.9gb   192.8gb    397.4gb    590.3gb           32 x.x.x.x      x.x.x.x        elas1
+   509      158.8gb   213.1gb    475.5gb    688.7gb           30 x.x.x.x      x.x.x.x        elas2
+5)设置当磁盘占用率达到多少时不再分配分片
+  curl -XPUT 'localhost:9200/_cluster/settings' -d
+  '{
+      "transient": {
+        "cluster.routing.allocation.disk.watermark.low": "90%"
+      }
+  }'
 ```
