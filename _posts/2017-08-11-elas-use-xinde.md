@@ -33,3 +33,18 @@ https://www.datadoghq.com/blog/elasticsearch-unassigned-shards/
       }
   }'
 ```
+### x-pack相关
+```
+1)Change the passwords of the built in kibana, logstash_system and elastic users:
+  curl -XPUT -u elastic 'localhost:9200/_xpack/security/user/elastic/_password' -H "Content-Type: application/json" -d '{
+  "password" : "elasticpassword"
+  }'
+
+  curl -XPUT -u elastic 'localhost:9200/_xpack/security/user/kibana/_password' -H "Content-Type: application/json" -d '{
+  "password" : "kibanapassword"
+  }'
+
+  curl -XPUT -u elastic 'localhost:9200/_xpack/security/user/logstash_system/_password' -H "Content-Type: application/json" -d '{
+  "password" : "logstashpassword"
+  }'
+```
