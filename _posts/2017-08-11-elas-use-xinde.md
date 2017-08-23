@@ -10,6 +10,11 @@ elasticsearch个人使用心得笔记
 curl -XPUT 'localhost:9200/<index_name>/_settings' -d '{"number_of_replicas": 0}'
 可以将一些不重要而且比较老的数据设置副本数为0以节省磁盘空间
 ```
+### 开关索引
+```
+curl -XPOST 'localhost:9200/<index_name>/_close'
+curl -XPOST 'localhost:9200/<index_name>/_open'
+```
 ### 某一索引为yellow原因及修复方法
 ```
 https://www.datadoghq.com/blog/elasticsearch-unassigned-shards/
