@@ -3,7 +3,10 @@ layout: post
 title: 我的win系统vagrant配置文件
 ---
 
+我的win系统vagrant配置文件
+
 ### 我的win系统vagrant配置文件
+
 ```
 Vagrant.configure(2) do |config|
   config.vm.box = "thdengops/ubuntu-14.04-dev"
