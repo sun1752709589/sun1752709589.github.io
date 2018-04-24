@@ -29,4 +29,6 @@ interactive shells) and your ~/.bash_profile (for login shells):
 
 If you use Zsh, add the following line to your ~/.zshrc (for all interactive shells):
 . /usr/share/autojump/autojump.sh
+
+mkdir ~/.local/share/autojump/
 ```
