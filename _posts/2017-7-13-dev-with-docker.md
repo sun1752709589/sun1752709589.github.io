@@ -11,6 +11,8 @@ title: 开发遇上docker
 mysql:
   docker run --name mysql -p 3306:3306 -v /sun/docker_data/mysql:/sun -e MYSQL_ROOT_PASSWORD=... -d mysql:latest
   docker run -d --name mysql -v /tmp/db:/var/lib/mysql -p 3309:3306 -e MYSQL_ROOT_PASSWORD=... mysql
+  docker run -d --name mysql -v /home/linkface/dockdata/mysql:/var/lib/mysql -p 3306:3306 -e MYSQL_ROOT_PASSWORD=... mysql mysqld --default-authentication-plugin=mysql_native_password
+
 postgres:
   docker run --name postgres -p 5432:5432 -v /sun/docker_data/postgres:/sun -e POSTGRES_PASSWORD=... -d postgres:latest
 redis:
